@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>प्रियंका मैडम - होम ट्यूटर</title>
+  <style>
+    :root {
+      --primary: #007bff;
+      --accent: #ff6f00;
+      --light-bg: #f9f9f9;
+      --dark-text: #222;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: var(--dark-text);
+      background-color: var(--light-bg);
+      line-height: 1.6;
+    }
+
+    header {
+      background: var(--primary);
+      color: white;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .lang-toggle {
+      background: var(--accent);
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    h2 {
+      color: var(--primary);
+      margin-top: 40px;
+    }
+
+    .subject-card {
+      background: white;
+      padding: 15px;
+      border-left: 5px solid var(--accent);
+      margin: 10px 0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .btn {
+      background: var(--accent);
+      color: white;
+      padding: 10px 14px;
+      border-radius: 5px;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    footer {
+      background: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
+
+    .testimonial, .faq {
+      background: white;
+      margin: 15px 0;
+      padding: 15px;
+      border-left: 4px solid var(--primary);
+    }
+
+    .intro-section {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .intro-text {
+      flex: 1 1 60%;
+    }
+
+    .intro-image {
+      flex: 1 1 35%;
+      max-width: 300px;
+    }
+
+    .intro-image img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1 id="title">प्रियंका मैडम - होम ट्यूटर</h1>
+  <button class="lang-toggle" onclick="toggleLanguage()">English</button>
+</header>
+
+<div class="container">
+
+  <section>
+    <h2 id="intro-heading">परिचय</h2>
+    <div class="intro-section">
+      <div class="intro-text">
+        <p id="intro-text">नमस्ते! मैं प्रियंका मैडम, पिछले 5 वर्षों से होम ट्यूटर के रूप में काम कर रही हूँ। कक्षा 1 से 10 तक के छात्रों को सभी मुख्य विषयों में पढ़ाती हूँ।</p>
+      </div>
+      <div class="intro-image">
+        <img src="https://i0.wp.com/post.healthline.com/wp-content/uploads/2023/11/Andrea-Rice-500x500-Bio.png?w=105&h=105" alt="Tutor Photo">
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 id="about-heading">मेरे बारे में</h2>
+    <p id="about-text">मैंने B.Sc और B.Ed की डिग्री प्राप्त की है। मेरा उद्देश्य बच्चों को सरल भाषा में समझाना और पढ़ाई को मजेदार बनाना है।</p>
+  </section>
+
+  <section>
+    <h2 id="method-heading">शिक्षण पद्धति</h2>
+    <p id="method-text">हर छात्र के लिए व्यक्तिगत योजना बनाना, छोटे लक्ष्य तय करना और नियमित मूल्यांकन मेरी पद्धति का हिस्सा है। मैं प्रैक्टिकल उदाहरणों से पढ़ाती हूँ ताकि विषय समझ में आए।</p>
+  </section>
+
+  <section>
+    <h2 id="subjects-heading">विषय</h2>
+    <div class="subject-card" data-en="Maths" data-hi="गणित">गणित</div>
+    <div class="subject-card" data-en="Science" data-hi="विज्ञान">विज्ञान</div>
+    <div class="subject-card" data-en="English" data-hi="अंग्रेजी">अंग्रेजी</div>
+    <div class="subject-card" data-en="Hindi" data-hi="हिन्दी">हिन्दी</div>
+    <div class="subject-card" data-en="Social Science" data-hi="सामाजिक विज्ञान">सामाजिक विज्ञान</div>
+  </section>
+
+  <section>
+    <h2 id="achievements-heading">छात्र उपलब्धियाँ</h2>
+    <p id="achievements-text">मेरे कई छात्र स्कूल टॉपर्स रहे हैं। पिछले साल 90% से अधिक अंक लाने वाले छात्रों की संख्या 15 से अधिक थी।</p>
+  </section>
+
+  <section>
+    <h2 id="testimonials-heading">अभिप्राय</h2>
+    <div class="testimonial" id="testimonial-1">"मैडम बच्चों को बहुत अच्छे से समझाती हैं। मेरी बेटी के मार्क्स बहुत अच्छे आए हैं।" - एक अभिभावक</div>
+    <div class="testimonial" id="testimonial-2">"पढ़ाई अब आसान लगती है! धन्यवाद मैम!" - छात्रा</div>
+  </section>
+
+  <section>
+    <h2 id="faq-heading">सामान्य प्रश्न</h2>
+    <div class="faq"><strong>Q:</strong> क्लास कैसे ली जाती है?<br><strong>A:</strong> घर पर या ऑनलाइन दोनों विकल्प उपलब्ध हैं।</div>
+    <div class="faq"><strong>Q:</strong> टाइमिंग क्या है?<br><strong>A:</strong> सुबह 9 बजे से शाम 7 बजे तक स्लॉट्स उपलब्ध हैं।</div>
+  </section>
+
+  <section>
+    <h2 id="contact-heading">संपर्क करें</h2>
+    <p id="contact-phone">📞 मोबाइल: <strong>9876543210</strong></p>
+    <a class="btn" id="whatsapp-link" href="https://wa.me/919876543210" target="_blank">WhatsApp पर संपर्क करें</a>
+  </section>
+
+</div>
+
+<footer>
+  <p id="footer-text">&copy; 2025 प्रियंका मैडम | सभी अधिकार सुरक्षित</p>
+</footer>
+
+<script>
+  let currentLang = "hi";
+  const content = {
+    hi: {
+      title: "प्रियंका मैडम - होम ट्यूटर",
+      introHeading: "परिचय",
+      introText: "नमस्ते! मैं प्रियंका मैडम, पिछले 5 वर्षों से होम ट्यूटर के रूप में काम कर रही हूँ।",
+      aboutHeading: "मेरे बारे में",
+      aboutText: "मैंने B.Sc और B.Ed की डिग्री प्राप्त की है।",
+      methodHeading: "शिक्षण पद्धति",
+      methodText: "हर छात्र के लिए व्यक्तिगत योजना बनाना...",
+      subjectsHeading: "विषय",
+      achievementsHeading: "छात्र उपलब्धियाँ",
+      achievementsText: "मेरे कई छात्र स्कूल टॉपर्स रहे हैं...",
+      testimonialsHeading: "अभिप्राय",
+      faqHeading: "सामान्य प्रश्न",
+      contactHeading: "संपर्क करें",
+      contactPhone: "📞 मोबाइल: <strong>9876543210</strong>",
+      whatsappLink: "WhatsApp पर संपर्क करें",
+      footerText: "&copy; 2025 प्रियंका मैडम | सभी अधिकार सुरक्षित"
+    },
+    en: {
+      title: "Priyanka Ma'am - Home Tutor",
+      introHeading: "Introduction",
+      introText: "Hello! I'm Priyanka Ma'am, working as a home tutor for the past 5 years.",
+      aboutHeading: "About Me",
+      aboutText: "I hold B.Sc and B.Ed degrees.",
+      methodHeading: "Teaching Methodology",
+      methodText: "I prepare a custom plan for each student...",
+      subjectsHeading: "Subjects",
+      achievementsHeading: "Student Achievements",
+      achievementsText: "Many of my students have topped their classes...",
+      testimonialsHeading: "Testimonials",
+      faqHeading: "FAQs",
+      contactHeading: "Contact",
+      contactPhone: "📞 Phone: <strong>9876543210</strong>",
+      whatsappLink: "Contact on WhatsApp",
+      footerText: "&copy; 2025 Priyanka Ma'am | All rights reserved"
+    }
+  };
+
+  function toggleLanguage() {
+    currentLang = currentLang === "hi" ? "en" : "hi";
+    const d = content[currentLang];
+
+    document.querySelector(".lang-toggle").textContent = currentLang === "hi" ? "English" : "हिन्दी";
+    document.getElementById("title").textContent = d.title;
+    document.getElementById("intro-heading").textContent = d.introHeading;
+    document.getElementById("intro-text").textContent = d.introText;
+    document.getElementById("about-heading").textContent = d.aboutHeading;
+    document.getElementById("about-text").textContent = d.aboutText;
+    document.getElementById("method-heading").textContent = d.methodHeading;
+    document.getElementById("method-text").textContent = d.methodText;
+    document.getElementById("subjects-heading").textContent = d.subjectsHeading;
+    document.getElementById("achievements-heading").textContent = d.achievementsHeading;
+    document.getElementById("achievements-text").textContent = d.achievementsText;
+    document.getElementById("testimonials-heading").textContent = d.testimonialsHeading;
+    document.getElementById("faq-heading").textContent = d.faqHeading;
+    document.getElementById("contact-heading").textContent = d.contactHeading;
+    document.getElementById("contact-phone").innerHTML = d.contactPhone;
+    document.getElementById("whatsapp-link").textContent = d.whatsappLink;
+    document.getElementById("footer-text").innerHTML = d.footerText;
+
+    document.querySelectorAll(".subject-card").forEach(card => {
+      card.textContent = currentLang === "hi" ? card.dataset.hi : card.dataset.en;
+    });
+  }
+</script>
+
+</body>
+</html>
